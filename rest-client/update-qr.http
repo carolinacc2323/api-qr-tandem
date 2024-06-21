@@ -1,0 +1,9 @@
+PUT http://localhost/api-qr-tandem/v1/update-qr.php
+Content-Type: "application/json"
+
+{
+    "id": 1,
+    "data": "El Jardín del Príncipe",
+    "nombre_ref": "Ojalá este en otro lado",
+    "description": "Modificación"
+}

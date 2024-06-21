@@ -1,0 +1,9 @@
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: application/json
+Authorization: Bearer TU_TOKEN
+
+{
+    "id": 4,
+    "email": "gerente@gmail.com",
+    "role": "admin"
+}

@@ -1,0 +1,9 @@
+POST http://localhost/api-qr-tandem/v1/create-qr.php
+Content-Type: "application/json"
+
+{
+    "data": "tsuky",
+    "nombre_ref": "el conejito",
+    "description": "que vive mejor que yo",
+    "created_by": 4
+}

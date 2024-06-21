@@ -1,0 +1,9 @@
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Gerente Aplicación",
+    "delegacion": "El Escorail",
+    "email": "gerente@gmail.com",
+    "password": "asdf"
+}

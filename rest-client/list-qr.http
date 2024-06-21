@@ -1,0 +1,2 @@
+GET http://localhost/api-qr-tandem/v1/list-qr.php
+Content-Type: "application/json"
