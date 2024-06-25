@@ -3,7 +3,29 @@ Content-Type: "application/json"
 
 {
     "nombre": "Gerente Aplicación",
-    "delegacion": "El Escorail",
+    "delegacion": "El Escorial",
     "email": "gerente@gmail.com",
-    "password": "asdf"
+    "password": "12345"
+}
+
+###
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Empleado Patrimonio",
+    "delegacion": "El Escorial",
+    "email": "empleado@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Invitado",
+    "delegacion": "El Escorial",
+    "email": "invitado@gmail.com",
+    "password": "12345"
 }

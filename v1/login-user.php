@@ -1,4 +1,5 @@
 <?php
+require '../config/cors.php';
 require '../config/database.php';
 
 $input = json_decode(file_get_contents('php://input'), true);
@@ -17,4 +18,3 @@ if ($user && password_verify($password, $user['password'])) {
     echo json_encode(['message' => 'Credenciales incorrectas']);
 }
 ?>
-

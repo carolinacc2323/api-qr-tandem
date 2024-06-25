@@ -1,0 +1,9 @@
+POST  http://localhost/api-qr-tandem/v1/email-soporte.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Juan",
+    "email": "gerente@gmail.com",
+    "asunto": "vida o muerte",
+    "mensaje": "Necesito ayuda" 
+}
