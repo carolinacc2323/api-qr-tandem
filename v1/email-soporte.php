@@ -8,15 +8,16 @@ $email = $input['email'];
 $asunto = $input['asunto'];
 $mensaje = $input['mensaje'];
 
-//
-$to = "carolinacc.tandem@gmail.com";
-$subject="envío desde php de $email";
-$body=$mensaje;
+$to = "soporte@gmail.com";
+$subject="Ticket de soporte de soporte de $nombre de $email";
+$body= $mensaje;
 $headers = "From: $email";
 
 if (mail($to, $subject, $body, $headers)) {
-    echo "Correo electrónico enviado correctamente";
+    header('Content-Type: application/json; charset=utf-8'); 
+    echo json_encode(['message' => 'El mensaje se ha enviado correctamente']);
 } else {
-    echo "Error al enviar el correo electrónico";
+    header('Content-Type: application/json; charset=utf-8'); 
+    echo json_encode(['message' => 'Error al enviar el correo electrónico']);
 }
 ?>
