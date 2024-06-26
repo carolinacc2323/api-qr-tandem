@@ -1,1 +1,3 @@
 GET http://localhost/api-qr-tandem/v1/list-users.php 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTkzOTEzMzcsImV4cCI6MTcxOTM5NDkzNywidXNlcklkIjoxLCJlbWFpbCI6ImdlcmVudGVAZ21haWwuY29tIn0.IzIViji4LjEF2U7lvcYv1cI4hkcSs-isCu0PUWEQP04
+Content-Type: "application/json"

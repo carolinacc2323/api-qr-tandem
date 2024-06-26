@@ -1,5 +1,8 @@
 <?php
-include '../config/database.php';
+require '../config/auth_middleware.php';
+$decoded = authenticate(); // Llama al middleware y almacena los datos decodificados si el token es válido
+
+require '../config/database.php';
 
 $sql = "SELECT * FROM users";
 $stmt = $pdo->prepare($sql);
