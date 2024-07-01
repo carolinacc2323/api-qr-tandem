@@ -2,5 +2,5 @@ GET  http://localhost/api-qr-tandem/v1/get-user.php
 Content-Type: "application/json"
 
 {
-    "id": 4
+    "id": 1
 }
