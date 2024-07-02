@@ -1,4 +1,5 @@
 <?php
+require '../vendor/autoload.php';
 require '../config/auth_middleware.php';
 $decoded = authenticate(); // Llama al middleware y almacena los datos decodificados si el token es válido
 

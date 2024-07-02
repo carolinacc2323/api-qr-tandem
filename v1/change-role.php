@@ -1,7 +1,7 @@
 <?php
 require "../config/cors.php";
+require '../vendor/autoload.php';
 require '../config/database.php';
-
 
 try {
     // Leer la entrada JSON
