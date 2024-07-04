@@ -5,5 +5,5 @@ Content-Type: "application/json"
     "data": "Código de prueba",
     "nombre_ref": "el conejito",
     "description": "que vive mejor que yo",
-    "created_by": 3
+    "created_by": 1
 }

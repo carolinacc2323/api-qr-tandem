@@ -29,5 +29,4 @@ if (isset($input['id']) && isset($input['email']) && isset($input['role'])) {
     http_response_code(400);
     echo json_encode(['message' => 'Datos incompletos']);
 }
-?>.
-
+?>

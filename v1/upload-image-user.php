@@ -24,11 +24,11 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
             // Actualizar la referencia en la base de datos
             $sql = "UPDATE users SET image_url = ? WHERE id = ?";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$id.$fileName, $id]);
+            $stmt->execute([$fileName, $id]);
             $response = [
                 'status' => 'success',
                 'message' => 'Imagen subida y guardada correctamente.',
-                'image_url' => $id.$fileName,
+                'image_url' => $fileName,
                 'user_id' => $id
             ];
         } else {
