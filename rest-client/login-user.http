@@ -23,3 +23,12 @@ Content-Type: "application/json"
     "email": "invitado@gmail.com",
     "password": "12345"
 }
+
+###
+POST  http://localhost/api-qr-tandem/v1/login-user.php
+Content-Type: "application/json"
+
+{
+    "email": "roberto@gmail.com",
+    "password": "12345"
+}

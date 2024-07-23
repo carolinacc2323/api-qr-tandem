@@ -24,7 +24,7 @@ function authenticate() {
 
         if ($jwt) {
             try {
-                $secretKey = '142345';
+                $secretKey = '123456';
                 $decoded = JWT::decode($jwt, new Key($secretKey, 'HS256'));
 
                 // Token es válido, devolver los datos decodificados
@@ -50,4 +50,3 @@ function authenticate() {
     }
 }
 ?>
-

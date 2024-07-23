@@ -1,8 +1,7 @@
 <?php
-
 require '../vendor/autoload.php';
 require '../config/auth_middleware.php';
-// $decoded = authenticate(); 
+$decoded = authenticate(); 
 // Llama al middleware y almacena los datos decodificados si el token es válido
 
 require '../config/cors.php';
@@ -15,6 +14,7 @@ $users = $stmt->fetchAll();
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode(
     ['users' => $users,
+    'token_decoded' => $decoded,
     'message' => 'Esta es la lista de usuarios registrados'
 ]);
 

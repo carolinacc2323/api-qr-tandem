@@ -5,13 +5,18 @@ require '../vendor/autoload.php';
 
 use \Firebase\JWT\JWT;
 $secretKey = $_ENV['SECRET_KEY'];
+
 $input = json_decode(file_get_contents('php://input'), true);
+
 $email = $input['email'];
 $password = $input['password'];
+
 $sql = "SELECT * FROM users WHERE email = ?";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$email]);
 $user = $stmt->fetch();
+
+// Datos para el token
 if ($user && password_verify($password, $user['password'])) {
     // Datos para el token
     $tokenData = [
