@@ -1,9 +1,54 @@
+### Todos los campos
 POST http://localhost/api-qr-tandem/v1/create-qr.php
 Content-Type: "application/json"
 
 {
-    "data": "Código de prueba",
-    "nombre_ref": "el conejito",
+    "data": "Código de prueba 3",
+    "nombre_ref": "Tsuky",
     "description": "que vive mejor que yo",
     "created_by": 1
+}
+
+### Falta campo requerido
+POST http://localhost/api-qr-tandem/v1/create-qr.php
+Content-Type: "application/json"
+
+{
+    "data": "Prueba",
+    "nombre_ref": "",
+    "description": "Falta campo requerido ",
+    "created_by": 1
+}
+
+### Falta campo no requerido
+POST http://localhost/api-qr-tandem/v1/create-qr.php
+Content-Type: "application/json"
+
+{
+    "data": "Falta campo no requerido 2",
+    "nombre_ref": "prueba 22",
+    "description": "",
+    "created_by": 1
+}
+
+### Campos en blanco
+POST http://localhost/api-qr-tandem/v1/create-qr.php
+Content-Type: "application/json"
+
+{
+    "data": "",
+    "nombre_ref": "",
+    "description": "",
+    "created_by": 1
+}
+
+### Prueba delete
+POST http://localhost/api-qr-tandem/v1/create-qr.php
+Content-Type: "application/json"
+
+{
+    "data": "Holi",
+    "nombre_ref": "holi",
+    "description": "holi",
+    "created_by": 24
 }

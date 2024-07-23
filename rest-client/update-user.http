@@ -24,6 +24,46 @@ Content-Type: application/json
 
 {
     "id": 3,
+    "nombre": "Invitado",
     "email": "invitado@gmail.com",
-    "role": "guest"
+    "delegacion": "Mallorca"
+}
+
+### Modificar Datos Completos
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: application/json
+
+{
+    "nombre": "Invitado2Prueba",
+    "delegacion": "Mallorca",
+    "email": "invitado2@example.com"
+}
+
+### Modificar si falta un campo
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: application/json
+
+{
+    "nombre": "Invitado2Prueba",
+    "delegacion": "Mallorca"
+}
+
+### Email correcto y otros campos en blanco
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: application/json
+
+{
+    "nombre": "",
+    "delegacion": "",
+    "email": "invitado2@gmail.com"
+}
+
+### Datos en blanco
+PUT http://localhost/api-qr-tandem/v1/update-user.php
+Content-Type: application/json
+
+{
+    "nombre": "",
+    "delegacion": "",
+    "email": ""
 }

@@ -29,3 +29,92 @@ Content-Type: "application/json"
     "email": "invitado@gmail.com",
     "password": "12345"
 }
+
+### TC 001 Caso de prueba todos los datos correctos
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Pepi",
+    "delegacion": "Aranjuez",
+    "email": "pepi@gmail.com",
+    "password": "asdf"
+}
+
+### TC 002-1 Falta de un dato
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Pepi2",
+    "email": "pepi2@gmail.com",
+    "password": "asdf"
+}
+
+### TC 002 Faltan datos todos los campos vacíos
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "",
+    "delegacion": "",
+    "email": "",
+    "password": ""
+}
+
+### TC 003 Prueba con usuario ya registrado
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Gerente Aplicación",
+    "delegacion": "El Escorial",
+    "email": "gerente@gmail.com",
+    "password": "12345"
+}
+
+### TC 004 Mandar mensaje con email inválido
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Lucia Martinez",
+    "delegacion": "Centro",
+    "email": "lucia.martinez@invalid",
+    "password": "asdf"
+}
+
+### TC 005 Mandar mensaje con email inválido
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Carlos Martínez",
+    "delegacion": "Madrid",
+    "email": "carlos.martinez@example.com",
+    "password": "12345",
+    "cargo": "cuidador de caballos"
+}
+
+### TC 005 Mandar mensaje con email inválido
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Popi",
+    "delegacion": "Madrid",
+    "email": "popi@example.com",
+    "password": "12345",
+    "cargo": "gili"
+}
+
+### TC 005 Mandar mensaje con email inválido
+POST http://localhost/api-qr-tandem/v1/register-user.php
+Content-Type: "application/json"
+
+{
+    "nombre": "Roberto",
+    "delegacion": "Madrid",
+    "email": "roberto@gmail.com",
+    "password": "12345"
+}

@@ -1,3 +1,4 @@
+### Todos los campos
 PUT http://localhost/api-qr-tandem/v1/update-qr.php
 Content-Type: "application/json"
 
@@ -6,4 +7,37 @@ Content-Type: "application/json"
     "data": "El Jardín del Príncipe",
     "nombre_ref": "Ojalá este en otro lado",
     "description": "Modificación"
+}
+
+### Falta campo requerido
+PUT http://localhost/api-qr-tandem/v1/update-qr.php
+Content-Type: "application/json"
+
+{
+    "id": 1,
+    "data": "",
+    "nombre_ref": "Falta campo requerido",
+    "description": "Modificación 2"
+}
+
+### Falta campo no requerido
+PUT http://localhost/api-qr-tandem/v1/update-qr.php
+Content-Type: "application/json"
+
+{
+    "id": 1,
+    "data": "Falta campo no requerido",
+    "nombre_ref": "Falta campo no requerido",
+    "description": ""
+}
+
+### Campos en blanco
+PUT http://localhost/api-qr-tandem/v1/update-qr.php
+Content-Type: "application/json"
+
+{
+    "id": 1,
+    "data": "",
+    "nombre_ref": "",
+    "description": ""
 }
