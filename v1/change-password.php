@@ -1,6 +1,7 @@
 <?php
 require '../config/cors.php';
 require '../vendor/autoload.php';
+$decoded = authenticate('admin'||'employee'); 
 require '../config/database.php';
 
 $input = json_decode(file_get_contents('php://input'), true);
@@ -29,6 +30,8 @@ if ($stmt_check->rowCount() > 0) {
     }
 } else {
     header('Content-Type: application/json; charset=utf-8');
-    echo json_encode(['message' => 'Error: Email no encontrado']);
+    echo json_encode(['message' => 'Error: Email no encontrado',
+    'token_decoded' => $decoded
+]);
 }
 ?>

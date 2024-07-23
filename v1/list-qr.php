@@ -1,6 +1,7 @@
 <?php
 require "../config/cors.php";
 require '../vendor/autoload.php';
+$decoded = authenticate('admin'||'employee'); 
 require "../config/database.php";
 
 $sql = "SELECT
@@ -21,7 +22,10 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $qr_codes = $stmt->fetchAll();
 header('Content-Type: application/json; charset=utf-8');
-echo json_encode(['qr_codes' => $qr_codes]);
+echo json_encode([
+    'qr_codes' => $qr_codes,
+    'token_decoded' => $decoded
+]);
 
 
 ?>

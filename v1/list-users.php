@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 require '../config/auth_middleware.php';
-$decoded = authenticate(); 
+$decoded = authenticate('admin'||'guest'); 
 // Llama al middleware y almacena los datos decodificados si el token es válido
 
 require '../config/cors.php';
