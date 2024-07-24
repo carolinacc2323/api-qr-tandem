@@ -1,7 +1,7 @@
 <?php
 require '../config/cors.php';
 require '../vendor/autoload.php';
-$decoded = authenticate('admin'||'employee'); 
+$decoded = authenticate('guest');
 require '../config/database.php';
 
 $input = json_decode(file_get_contents('php://input'), true);
