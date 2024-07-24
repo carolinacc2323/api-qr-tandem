@@ -23,5 +23,4 @@ $qr_codes = $stmt->fetchAll();
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode(['qr_codes' => $qr_codes]);
 
-
 ?>
